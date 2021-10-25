@@ -21,7 +21,7 @@ namespace DesarrolloDeInterfaces
         {
             if (this.txtNombre.Text == String.Empty)
             {
-                MessageBox.Show("Deeb introducir un nombre");
+                MessageBox.Show("Debe introducir un nombre");
             }
             else
             {
@@ -32,7 +32,27 @@ namespace DesarrolloDeInterfaces
 
         private void listNombre_SelectedValueChanged(object sender, EventArgs e)
         {
-            this.txtNombre.Text = this.listNombre.SelectedItem.ToString();
+
+           if(this.listNombre.SelectedItem == null)
+            {
+                return;
+            }
+                this.txtNombre.Text = this.listNombre.SelectedItem.ToString();
+
+            
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if(this.listNombre.SelectedItem == null)
+            {
+                MessageBox.Show("Debes selececcionar antes un nombre de la lista");
+            }
+            else
+            {
+            this.listNombre.Items.Remove(this.listNombre.SelectedItem);
+                this.txtNombre.Text = String.Empty;
+            }
         }
     }
 }
