@@ -19,6 +19,7 @@ namespace DesarrolloDeInterfaces
 
         private void label1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(e.ToString());
         }
 
         private void btnNombre_Click(object sender, EventArgs e)
