@@ -44,14 +44,37 @@ namespace DesarrolloDeInterfaces
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            if(this.listNombre.SelectedItem == null)
+            if (this.listNombre.SelectedItem == null)
             {
                 MessageBox.Show("Debes selececcionar antes un nombre de la lista");
             }
             else
             {
-            this.listNombre.Items.Remove(this.listNombre.SelectedItem);
+                for (int i = this.listNombre.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    this.listNombre.Items.Remove(this.listNombre.SelectedItems[i]);
+                }
                 this.txtNombre.Text = String.Empty;
+            }
+        }
+
+        private void listNombre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(this.listNombre.SelectedItem != null)
+            {
+            if(e.KeyCode == Keys.Delete) {
+                    for (int i = this.listNombre.SelectedItems.Count - 1; i >= 0; i--)
+                    {
+                        this.listNombre.Items.Remove(this.listNombre.SelectedItems[i]);
+                    }
+                    this.txtNombre.Text = String.Empty;
+            }
+                
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un elemento de la lista");
+
             }
         }
     }

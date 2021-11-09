@@ -73,9 +73,11 @@ namespace DesarrolloDeInterfaces
             this.listNombre.FormattingEnabled = true;
             this.listNombre.Location = new System.Drawing.Point(12, 146);
             this.listNombre.Name = "listNombre";
+            this.listNombre.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listNombre.Size = new System.Drawing.Size(292, 95);
             this.listNombre.TabIndex = 3;
             this.listNombre.SelectedValueChanged += new System.EventHandler(this.listNombre_SelectedValueChanged);
+            this.listNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listNombre_KeyDown);
             // 
             // btnBorrar
             // 
