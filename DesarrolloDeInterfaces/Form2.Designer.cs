@@ -39,7 +39,7 @@ namespace DesarrolloDeInterfaces
             // btnNombre
             // 
             this.btnNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNombre.Location = new System.Drawing.Point(229, 94);
+            this.btnNombre.Location = new System.Drawing.Point(321, 94);
             this.btnNombre.Name = "btnNombre";
             this.btnNombre.Size = new System.Drawing.Size(75, 23);
             this.btnNombre.TabIndex = 0;
@@ -53,7 +53,7 @@ namespace DesarrolloDeInterfaces
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Location = new System.Drawing.Point(62, 58);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(242, 20);
+            this.txtNombre.Size = new System.Drawing.Size(334, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // lblNombre
@@ -74,7 +74,7 @@ namespace DesarrolloDeInterfaces
             this.listNombre.Location = new System.Drawing.Point(12, 146);
             this.listNombre.Name = "listNombre";
             this.listNombre.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listNombre.Size = new System.Drawing.Size(292, 95);
+            this.listNombre.Size = new System.Drawing.Size(384, 160);
             this.listNombre.TabIndex = 3;
             this.listNombre.SelectedValueChanged += new System.EventHandler(this.listNombre_SelectedValueChanged);
             this.listNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listNombre_KeyDown);
@@ -82,7 +82,7 @@ namespace DesarrolloDeInterfaces
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrar.Location = new System.Drawing.Point(62, 94);
+            this.btnBorrar.Location = new System.Drawing.Point(154, 94);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 23);
             this.btnBorrar.TabIndex = 4;
@@ -95,13 +95,14 @@ namespace DesarrolloDeInterfaces
             this.AcceptButton = this.btnNombre;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 284);
+            this.ClientSize = new System.Drawing.Size(408, 358);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.listNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnNombre);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
